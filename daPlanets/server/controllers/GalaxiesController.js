@@ -6,6 +6,7 @@ export class GalaxiesController extends BaseController {
     super('api/galaxies')
     this.router
     .get('', this.getGalaxies)
+    .post('', this.createGalaxy)
   }
 
   async createGalaxy(req, res, next) {
@@ -20,6 +21,7 @@ export class GalaxiesController extends BaseController {
       
     }
   }
+
   async getGalaxies(req, res, next) {
     try {
 
